@@ -41,7 +41,7 @@
     .project-card a { color: #00aaff; font-weight: bold; }
 
     /* Contact */
-    #contact p { text-align: center; margin-bottom: 10px; }
+    #contact p { text-align: center; margin-bottom: 10px; font-size: 1.1rem; }
 
     /* Footer */
     footer { text-align: center; padding: 2rem; background: #111; color: white; }
@@ -73,7 +73,7 @@
     <h2>About Me</h2>
     <p>
       I'm a Computer Science student passionate about coding, AI, and building tools that solve real-world problems.
-      I have experience in Python, JavaScript, and web development. I enjoy working on automation projects and contributing to open source.
+      I have experience in Python, JavaScript, SQL, and web development. I enjoy working on automation projects and contributing to open source.
     </p>
   </section>
 
@@ -92,32 +92,46 @@
   <!-- Projects -->
   <section id="projects">
     <h2>Projects</h2>
-    <div class="grid">
-      <div class="project-card">
-        <h3>Spotify Data Analysis</h3>
-        <p>SQL project analyzing Spotify's most streamed songs of 2018.</p>
-        <a href="https://github.com/your-username/spotify-project" target="_blank">View on GitHub</a>
-      </div>
-      <div class="project-card">
-        <h3>Productivity Booster</h3>
-        <p>Task tracker & Pomodoro timer built with JavaScript and localStorage.</p>
-        <a href="https://github.com/your-username/productivity-booster" target="_blank">View on GitHub</a>
-      </div>
+    <div class="grid" id="repo-list">
+      <!-- GitHub Repos will be inserted here -->
     </div>
   </section>
 
   <!-- Contact -->
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:youremail@example.com">youremail@example.com</a></p>
-    <p>LinkedIn: <a href="https://www.linkedin.com/in/wadih-hani-a69a52375" target="_blank">My LinkedIn</a></p>
-    <p>GitHub: <a href="https://github.com/your-username" target="_blank">My GitHub</a></p>
+    <p>Email: <a href="mailto:wadi3hany@gmail.com">wadi3hany@gmail.com</a></p>
+    <p>Phone: <a href="tel:+96181677395">+961 81 677 395</a></p>
+    <p>LinkedIn: <a href="https://www.linkedin.com/in/wadih-hani-a69a52375" target="_blank">linkedin.com/in/wadih-hani</a></p>
+    <p>GitHub: <a href="https://github.com/your-username" target="_blank">github.com/your-username</a></p>
   </section>
 
   <!-- Footer -->
   <footer>
     <p>© 2025 Wadih Hani | Built with HTML & CSS</p>
   </footer>
+
+  <!-- GitHub API Script -->
+  <script>
+    const username = "your-username"; // 👉 change this to your GitHub username
+    const repoList = document.getElementById("repo-list");
+
+    fetch(`https://api.github.com/users/${username}/repos`)
+      .then(response => response.json())
+      .then(data => {
+        data.forEach(repo => {
+          let card = document.createElement("div");
+          card.classList.add("project-card");
+          card.innerHTML = `
+            <h3>${repo.name}</h3>
+            <p>${repo.description || "No description provided"}</p>
+            <a href="${repo.html_url}" target="_blank">View on GitHub</a>
+          `;
+          repoList.appendChild(card);
+        });
+      })
+      .catch(error => console.error("Error fetching repos:", error));
+  </script>
 
 </body>
 </html>
