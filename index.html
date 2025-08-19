@@ -112,26 +112,65 @@
   </section>
 
   <!-- Skills -->
-  <section id="skills">
-    <h2>Skills</h2>
-    <div class="grid">
-      <div class="card"><i class="fa-brands fa-python"></i> Python</div>
-      <div class="card"><i class="fa-solid fa-code"></i> C</div>
-      <div class="card"><i class="fa-brands fa-js"></i> JavaScript</div>
-      <div class="card"><i class="fa-brands fa-html5"></i><i class="fa-brands fa-css3-alt"></i> HTML & CSS</div>
-      <div class="card"><i class="fa-solid fa-database"></i> SQL</div>
-      <div class="card"><i class="fa-solid fa-terminal"></i> Bash</div>
-      <div class="card"><i class="fa-solid fa-plug"></i> APIs</div>
-      <div class="card"><i class="fa-solid fa-robot"></i> Machine Learning</div>
-      <div class="card"><i class="fa-solid fa-table"></i> Excel (Advanced)</div>
-      <div class="card"><i class="fa-solid fa-chart-line"></i> Data Analysis</div>
-      <div class="card"><i class="fa-solid fa-user-tie"></i> Leadership</div>
-      <div class="card"><i class="fa-solid fa-lightbulb"></i> Problem-Solving</div>
-      <div class="card"><i class="fa-solid fa-users"></i> Team Collaboration</div>
-      <div class="card"><i class="fa-solid fa-language"></i> Arabic (Native)</div>
-      <div class="card"><i class="fa-solid fa-language"></i> English (Professional)</div>
-    </div>
-  </section>
+<section id="skills">
+  <h2>Skills</h2>
+  <div class="grid">
+    <div class="card"><img src="https://img.icons8.com/color/48/000000/python.png" alt="Python"><p>Python</p></div>
+    <div class="card"><img src="https://img.icons8.com/color/48/000000/c.png" alt="C"><p>C</p></div>
+    <div class="card"><img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript"><p>JavaScript</p></div>
+    <div class="card"><img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML"><p>HTML & CSS</p></div>
+    <div class="card"><img src="https://img.icons8.com/color/48/000000/database.png" alt="SQL"><p>SQL</p></div>
+    <div class="card"><img src="https://img.icons8.com/color/48/000000/command-line.png" alt="Bash"><p>Bash</p></div>
+    <div class="card"><img src="https://img.icons8.com/color/48/000000/api.png" alt="APIs"><p>APIs</p></div>
+    <div class="card"><img src="https://img.icons8.com/color/48/000000/artificial-intelligence.png" alt="ML"><p>Machine Learning</p></div>
+    <div class="card"><img src="https://img.icons8.com/color/48/000000/microsoft-excel-2019.png" alt="Excel"><p>Excel (Advanced)</p></div>
+    <div class="card"><img src="https://img.icons8.com/color/48/000000/combo-chart.png" alt="Data Analysis"><p>Data Analysis</p></div>
+    <div class="card"><img src="https://img.icons8.com/color/48/000000/manager.png" alt="Leadership"><p>Leadership</p></div>
+    <div class="card"><img src="https://img.icons8.com/color/48/000000/idea.png" alt="Problem Solving"><p>Problem-Solving</p></div>
+    <div class="card"><img src="https://img.icons8.com/color/48/000000/groups.png" alt="Team"><p>Team Collaboration</p></div>
+    <div class="card"><img src="https://img.icons8.com/color/48/000000/translation.png" alt="Arabic"><p>Arabic (Native)</p></div>
+    <div class="card"><img src="https://img.icons8.com/color/48/000000/translation.png" alt="English"><p>English (Professional)</p></div>
+  </div>
+</section>
+  
+/* Skills Grid */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 20px;
+  justify-items: center;
+}
+
+.card {
+  background: #fff;
+  width: 140px; /* equal size */
+  height: 140px; /* equal size */
+  border-radius: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.card img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-weight: 500;
+  font-size: 0.95rem;
+}
+
 
   <!-- Projects -->
   <section id="projects">
@@ -192,7 +231,7 @@
   <!-- Contact -->
   <section id="contact">
     <h2>Contact</h2>
-    <p>Email: <a href="mailto:wadi3hany@gmail.com">wadi3hany@gmail.com</a></p>
+    <p>Email: <a href="mailto:wadi3hany@gmail.com">wadihhani2@gmail.com</a></p>
     <p>Phone: <a href="tel:+96181677395">+961 81 677 395</a></p>
     <p>LinkedIn: <a href="https://www.linkedin.com/in/wadih-hani-a69a52375" target="_blank">linkedin.com/in/wadih-hani</a></p>
     <p>GitHub: <a href="https://github.com/WadihHani" target="_blank">github.com/WadihHani</a></p>
