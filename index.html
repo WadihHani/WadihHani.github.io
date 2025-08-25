@@ -36,8 +36,8 @@
     /* Grid & Cards */
     .grid {
       display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-      gap: 15px;
+      grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+      gap: 20px;
       justify-items: center;
     }
 
@@ -50,16 +50,29 @@
       transition: transform 0.3s, box-shadow 0.3s;
     }
 
+    .card {
+      width: 140px;
+      height: 140px;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+    }
+
     .card:hover, .project-card:hover, .timeline-item:hover {
       transform: translateY(-5px);
       box-shadow: 0 6px 20px rgba(0,0,0,0.15);
     }
 
-    .card i {
-      font-size: 1.5rem;
-      margin-bottom: 8px;
-      display: block;
-      color: #00aaff;
+    .card img {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-weight: 500;
+      font-size: 0.95rem;
     }
 
     /* Projects */
@@ -112,65 +125,26 @@
   </section>
 
   <!-- Skills -->
-<section id="skills">
-  <h2>Skills</h2>
-  <div class="grid">
-    <div class="card"><img src="https://img.icons8.com/color/48/000000/python.png" alt="Python"><p>Python</p></div>
-    <div class="card"><img src="https://img.icons8.com/color/48/000000/c.png" alt="C"><p>C</p></div>
-    <div class="card"><img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript"><p>JavaScript</p></div>
-    <div class="card"><img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML"><p>HTML & CSS</p></div>
-    <div class="card"><img src="https://img.icons8.com/color/48/000000/database.png" alt="SQL"><p>SQL</p></div>
-    <div class="card"><img src="https://img.icons8.com/color/48/000000/command-line.png" alt="Bash"><p>Bash</p></div>
-    <div class="card"><img src="https://img.icons8.com/color/48/000000/api.png" alt="APIs"><p>APIs</p></div>
-    <div class="card"><img src="https://img.icons8.com/color/48/000000/artificial-intelligence.png" alt="ML"><p>Machine Learning</p></div>
-    <div class="card"><img src="https://img.icons8.com/color/48/000000/microsoft-excel-2019.png" alt="Excel"><p>Excel (Advanced)</p></div>
-    <div class="card"><img src="https://img.icons8.com/color/48/000000/combo-chart.png" alt="Data Analysis"><p>Data Analysis</p></div>
-    <div class="card"><img src="https://img.icons8.com/color/48/000000/manager.png" alt="Leadership"><p>Leadership</p></div>
-    <div class="card"><img src="https://img.icons8.com/color/48/000000/idea.png" alt="Problem Solving"><p>Problem-Solving</p></div>
-    <div class="card"><img src="https://img.icons8.com/color/48/000000/groups.png" alt="Team"><p>Team Collaboration</p></div>
-    <div class="card"><img src="https://img.icons8.com/color/48/000000/translation.png" alt="Arabic"><p>Arabic (Native)</p></div>
-    <div class="card"><img src="https://img.icons8.com/color/48/000000/translation.png" alt="English"><p>English (Professional)</p></div>
-  </div>
-</section>
-  
-/* Skills Grid */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
-  gap: 20px;
-  justify-items: center;
-}
-
-.card {
-  background: #fff;
-  width: 140px; /* equal size */
-  height: 140px; /* equal size */
-  border-radius: 15px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-  transition: transform 0.3s, box-shadow 0.3s;
-}
-
-.card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 6px 20px rgba(0,0,0,0.15);
-}
-
-.card img {
-  width: 48px;
-  height: 48px;
-  margin-bottom: 10px;
-}
-
-.card p {
-  font-weight: 500;
-  font-size: 0.95rem;
-}
-
+  <section id="skills">
+    <h2>Skills</h2>
+    <div class="grid">
+      <div class="card"><img src="https://img.icons8.com/color/48/000000/python.png" alt="Python"><p>Python</p></div>
+      <div class="card"><img src="https://img.icons8.com/color/48/000000/c.png" alt="C"><p>C</p></div>
+      <div class="card"><img src="https://img.icons8.com/color/48/000000/javascript.png" alt="JavaScript"><p>JavaScript</p></div>
+      <div class="card"><img src="https://img.icons8.com/color/48/000000/html-5.png" alt="HTML"><p>HTML & CSS</p></div>
+      <div class="card"><img src="https://img.icons8.com/color/48/000000/database.png" alt="SQL"><p>SQL</p></div>
+      <div class="card"><img src="https://img.icons8.com/color/48/000000/command-line.png" alt="Bash"><p>Bash</p></div>
+      <div class="card"><img src="https://img.icons8.com/color/48/000000/api.png" alt="APIs"><p>APIs</p></div>
+      <div class="card"><img src="https://img.icons8.com/color/48/000000/artificial-intelligence.png" alt="ML"><p>Machine Learning</p></div>
+      <div class="card"><img src="https://img.icons8.com/color/48/000000/microsoft-excel-2019.png" alt="Excel"><p>Excel (Advanced)</p></div>
+      <div class="card"><img src="https://img.icons8.com/color/48/000000/combo-chart.png" alt="Data Analysis"><p>Data Analysis</p></div>
+      <div class="card"><img src="https://img.icons8.com/color/48/000000/manager.png" alt="Leadership"><p>Leadership</p></div>
+      <div class="card"><img src="https://img.icons8.com/color/48/000000/idea.png" alt="Problem Solving"><p>Problem-Solving</p></div>
+      <div class="card"><img src="https://img.icons8.com/color/48/000000/groups.png" alt="Team"><p>Team Collaboration</p></div>
+      <div class="card"><img src="https://img.icons8.com/color/48/000000/translation.png" alt="Arabic"><p>Arabic (Native)</p></div>
+      <div class="card"><img src="https://img.icons8.com/color/48/000000/translation.png" alt="English"><p>English (Professional)</p></div>
+    </div>
+  </section>
 
   <!-- Projects -->
   <section id="projects">
